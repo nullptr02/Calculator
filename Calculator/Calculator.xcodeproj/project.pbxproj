@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C1AE199290B0B99008E9CE2 /* LcdSolid-VPzB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AE198290B0B99008E9CE2 /* LcdSolid-VPzB.ttf */; };
 		4C371B372909E2A400E56743 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371B362909E2A400E56743 /* CalculatorApp.swift */; };
 		4C371B392909E2A400E56743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371B382909E2A400E56743 /* ContentView.swift */; };
 		4C371B3B2909E2A600E56743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371B3A2909E2A600E56743 /* Assets.xcassets */; };
 		4C371B3E2909E2A600E56743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371B3D2909E2A600E56743 /* Preview Assets.xcassets */; };
+		4C74144C29101AFB00523304 /* LcdSolid-VPzB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AE198290B0B99008E9CE2 /* LcdSolid-VPzB.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,7 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1AE199290B0B99008E9CE2 /* LcdSolid-VPzB.ttf in Resources */,
+				4C74144C29101AFB00523304 /* LcdSolid-VPzB.ttf in Resources */,
 				4C371B3E2909E2A600E56743 /* Preview Assets.xcassets in Resources */,
 				4C371B3B2909E2A600E56743 /* Assets.xcassets in Resources */,
 			);

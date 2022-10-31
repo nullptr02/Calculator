@@ -63,8 +63,8 @@ struct DarkButton: ButtonStyle {
             .contentShape(RoundedRectangle(cornerRadius: 35))
             .frame(width: 87, height: 85, alignment: .center)
             .background(
-            DarkBackground(isTapped: configuration.isPressed, shape: RoundedRectangle(cornerRadius: 35))
-        )
+                DarkBackground(isTapped: configuration.isPressed, shape: RoundedRectangle(cornerRadius: 35))
+            )
     }
 }
 
@@ -132,33 +132,19 @@ struct CalculatorUI: View {
                     RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(Color("calculator_bg"))
                         .overlay {
-                        RoundedRectangle(cornerRadius: 15).stroke(.black, lineWidth: 5)
-                    }
+                            RoundedRectangle(cornerRadius: 15).stroke(.black, lineWidth: 5)
+                        }
 
                     HStack {
                         Spacer()
 
                         Text(value)
-                            .font(.custom("LcdSolid-VPzB", size: 100))
+                            .font(.custom("LcdSolid", size: 100))
                             .foregroundColor(.black)
                             .frame(height: 200)
                     }
-                        .offset(x: -10, y: -10)
-
-                        .padding(10)
-
-                    HStack {
-                        Image(systemName: "play.fill")
-                            .foregroundColor(.black)
-                            .font(.title2)
-
-                        Text(operationname)
-                            .foregroundColor(.black)
-                            .font(.custom("LcdSolid-VPzB", size: 40))
-
-                        Spacer()
-                    }.padding()
-                        .offset(x: 0, y: 110)
+                    .offset(x: -10, y: -10)
+                    .padding(10)
 
                 }.padding()
 
@@ -166,7 +152,7 @@ struct CalculatorUI: View {
 
                 // Our buttons
                 ForEach(buttons, id: \.self) { row in
-                    HStack(spacing: 10) {
+                    HStack(spacing: 11) {
                         ForEach(row, id: \.self) { item in
                             Button(action: {
                                 self.didTap(button: item)
@@ -175,11 +161,10 @@ struct CalculatorUI: View {
                                     .font(.system(size: 40))
                                     .fontWeight(.bold)
                                     .foregroundColor(item.buttonColor)
-
                             }).buttonStyle(DarkButton())
                         }
                     }
-                        .padding(.bottom, 3)
+                    .padding(.bottom, 3)
                 }
             }
         }
@@ -233,11 +218,12 @@ struct CalculatorUI: View {
             }
 
             if button != .equal {
-                self.value = "0"
+                self.value = ""
             }
         case .clear:
             self.value = "0"
             self.operationname = "CLEAR"
+            self.runningNumber = 0
         case .decimal, .negative, .percent:
             break
         default:
